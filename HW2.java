@@ -106,7 +106,7 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-
+		if(suit==1)
 	}
 	public int getSuit(){
 		return suit;
