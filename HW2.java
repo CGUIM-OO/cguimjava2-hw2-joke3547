@@ -77,13 +77,22 @@ class Deck{
 		//Card card=new Card(1,1); ->means new card as clubs ace
 		//cards.add(card);
 		//Sample code end
-
-	}	
+		for (int n = 1; n <= nDeck; n++) {
+			for (int s = 1; s <= 4; s++) {
+				for (int r = 1; r <= 13; r++) {
+					Card card = new Card(s, r);
+					cards.add(card);
+				}
+			}
+		}
+	}
 	//TODO: Please implement the method to print all cards on screen (10 points)
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
-
+		for(int i = 0;i < cards.size();i++){
+			cards.get(i).printCard();
+		}
 	}
 	public ArrayList<Card> getAllCards(){
 		return cards;
@@ -106,7 +115,31 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-		if(suit==1)
+		if(suit == 1){
+			if(rank == 1){
+				System.out.println("Clubs"+ "," + "Ace");
+			}else
+				System.out.println("Clubs"+ "," + rank);
+		}
+		if(suit == 2){
+			if(rank == 1){
+				System.out.println("Diamonds"+ "," + "Ace");
+			}else
+				System.out.println("Diamonds"+ "," + rank);
+		}
+		if(suit == 3){
+			if(rank == 1){
+				System.out.println("Hearts"+ "," + "Ace");
+			}else
+				System.out.println("Hearts"+ "," + rank);
+		}
+		if(suit == 4){
+			if(rank == 1){
+				System.out.println("Spades"+ "," + "Ace");
+			}else
+				System.out.println("Spades"+ "," + rank);
+		}
+			
 	}
 	public int getSuit(){
 		return suit;
